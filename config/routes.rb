@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     resources :users
+    get 'admin' => 'users#admin'
     post 'user_token' => 'user_token#create'
     resources :movies
     post 'favorites/:id' => 'favorites#create'

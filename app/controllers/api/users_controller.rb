@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-  before_action :authenticate_user, only: [:update, :destroy]
+  before_action :authenticate_user, only: [:update, :destroy, :admin]
   before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /api/users
@@ -45,6 +45,11 @@ class Api::UsersController < ApplicationController
     else
       render json: @user.errors, status: :unauthorized
     end
+  end
+
+  def admin
+    value = current_user && current_user.admin == true
+    render :json => value.to_json
   end
 
   private
