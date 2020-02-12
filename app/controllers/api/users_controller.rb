@@ -1,8 +1,7 @@
 class Api::UsersController < ApplicationController
   before_action :authenticate_user, only: [:update, :destroy, :admin]
   before_action :set_user, only: [:show, :update, :destroy]
-
-  # GET /api/users
+   # GET /api/users
   def index
     @users = User.all
 
