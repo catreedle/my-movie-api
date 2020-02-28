@@ -1,24 +1,16 @@
-# README
+use `postgresql` as main database
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Instalation
 
-Things you may want to cover:
+```
+use rvm for dinamic ruby version
+bundle install
+rake db:create
+rake db:migrate
+rake db:seed
+```
+## Documentation
 
-* Ruby version
+API documentation available at [https://documenter.getpostman.com/view/8712628/SWTK4Dz2](https://documenter.getpostman.com/view/8712628/SWTK4Dz2) to view it in the browser.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Have fun!
